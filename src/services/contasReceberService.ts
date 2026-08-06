@@ -31,6 +31,7 @@ export function listarContas(empresa?:string, status?:string){
 }
 
 export function criarConta(dados: DadosContaReceber){
+    console.log(dados)
     const novaConta:ContaReceber = {
         id: proximoId,
         ...dados,

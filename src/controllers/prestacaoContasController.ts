@@ -6,9 +6,10 @@ export function criar(requisicao:Request<Object,Object, DadosContaReceber>,
     resposta:Response) {
 
     const prestacaoConta = requisicao.body;
+    console.log(prestacaoConta);
     const retorno = criarConta(prestacaoConta);
     
-    resposta.status(201).json({retorno});
+    resposta.status(201).json(retorno);
 }
 
 export function listar (requisicao:Request<Object,Object,Object, ConsultaContas>,
